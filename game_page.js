@@ -2,6 +2,7 @@ player1name=localStorage.getItem("player1name")
 player2name=localStorage.getItem("player2name")
 var player1score=0
 var player2score=0
+var word
 document.getElementById("player1name").innerHTML=player1name+";"
 document.getElementById("player2name").innerHTML=player2name+";"
 document.getElementById("player1score").innerHTML=player1score;
@@ -34,10 +35,12 @@ function check() {
     answer=getanswer.toLowerCase()
         if (answer==word) {
         if (answerturn=="player1") {
-         player1score=player1score+1   
+         player1score=player1score+1
+             document.getElementById("player1score").innerHTML=player1score;
         } 
         if (answerturn=="player2") {
-            player2score=player2score+1   
+            player2score=player2score+1
+             document.getElementById("player2score").innerHTML=player2score;
            }  
         }
     if (questionturn=="player1") {
